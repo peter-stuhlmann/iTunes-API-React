@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import '../assets/scss/main.scss';
 import TrackList from './TrackList';
 import LegalNotice from './LegalNotice';
 import PrivacyPolicy from './PrivacyPolicy';
@@ -11,7 +12,7 @@ export default class App extends Component {
     return (
       <Router>
 
-        <span className="site-title">Songs</span>
+        <Link className="site-title" to="/">Songs</Link>
 
         <Switch>
           <Route exact path="/" component={ TrackList } />
