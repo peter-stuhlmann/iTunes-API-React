@@ -26,13 +26,17 @@ export default class App extends Component {
     return (
       <Router>
 
-        <Link className="site-title" to="/">Songs</Link>
+        <main>
 
-        <Switch>
-          <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} />} />
-          <Route path="/impressum" component={ LegalNotice } />
-          <Route path="/datenschutzerklaerung" component={ PrivacyPolicy } />
-        </Switch>
+          <Link className="site-title" to="/">Songs</Link>
+
+          <Switch>
+            <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} />} />
+            <Route path="/impressum" component={ LegalNotice } />
+            <Route path="/datenschutzerklaerung" component={ PrivacyPolicy } />
+          </Switch>
+
+        </main>
 
         <Footer />
 
