@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MetaTags from 'react-meta-tags';
 import TrackListItem from './TrackListItem';
-import Search from './Search';
 
 export default class TrackList extends Component {
 
@@ -15,8 +14,6 @@ export default class TrackList extends Component {
             <link rel="shortcut icon" type="image/png" href={require("../assets/img/powered.png")} />
             <meta name="description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
           </MetaTags>
-
-          <Search />
         
           <table id="searchResults">
             <colgroup>
