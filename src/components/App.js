@@ -8,6 +8,20 @@ import Footer from './Footer';
 
 export default class App extends Component {
   
+  constructor(props) {
+    super()
+    
+    this.state = {
+    results: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch('https://dci-fbw12-search-itunes.now.sh/?term=Silence&limit=20')
+      .then(response => response.json())
+      .then(data => this.setState({ results: data.results }));
+  }
+
   render() {
     return (
       <Router>
@@ -15,7 +29,7 @@ export default class App extends Component {
         <Link className="site-title" to="/">Songs</Link>
 
         <Switch>
-          <Route exact path="/" component={ TrackList } />
+          <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} />} />
           <Route path="/impressum" component={ LegalNotice } />
           <Route path="/datenschutzerklaerung" component={ PrivacyPolicy } />
         </Switch>
