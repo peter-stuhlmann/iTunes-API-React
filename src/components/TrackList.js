@@ -16,7 +16,7 @@ export default class TrackList extends Component {
             <meta name="description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
           </MetaTags>
         
-          <TrackCounter tracksAmount={Object.keys(this.props.results).length} />
+          <TrackCounter tracksAmount={Object.keys(this.props.results).length} artistName={this.props.searchTerm} />
 
           <table id="searchResults">
             <colgroup>

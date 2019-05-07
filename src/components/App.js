@@ -50,7 +50,7 @@ export default class App extends Component {
           <Search onSearchInputChangeHandler={this.onSearchInputChange} />
 
           <Switch>
-            <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} />} />
+            <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} searchTerm={this.state.searchTerm} />} />
             <Route path="/impressum" component={ LegalNotice } />
             <Route path="/datenschutzerklaerung" component={ PrivacyPolicy } />
           </Switch>
