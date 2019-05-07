@@ -15,7 +15,7 @@ export default class TrackListItem extends Component {
             songs.releaseDate = songs.releaseDate.slice(0, 10)
             
             return(
-              <tr>
+              <tr key={songs.trackId}>
                 <td>{index}</td>
                 <td></td>
                 <td><img alt={songs.collectionName} title={songs.collectionName} src={songs.artworkUrl30} /></td>
