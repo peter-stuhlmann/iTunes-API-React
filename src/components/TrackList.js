@@ -11,7 +11,7 @@ export default class TrackList extends Component {
         <React.Fragment>
 
           <MetaTags>
-            <title>Privacy policy | iTunes Tracklist</title>
+            <title>iTunes Tracklist | Peter R. Stuhlmann Webentwicklung</title>
             <link rel="shortcut icon" type="image/png" href={require("../assets/img/powered.png")} />
             <meta name="description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
           </MetaTags>
