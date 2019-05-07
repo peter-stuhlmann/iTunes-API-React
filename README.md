@@ -1,7 +1,11 @@
 # iTunes API
 **- built with REACT -**
 
-![MIT License](https://img.shields.io/github/license/peter-stuhlmann/iTunes-API-React.svg) ![Code size](https://img.shields.io/github/languages/code-size/peter-stuhlmann/iTunes-API-React.svg) ![downloads](https://img.shields.io/github/downloads/peter-stuhlmann/iTunes-API-React/total.svg) ![open issues](https://img.shields.io/github/issues/peter-stuhlmann/iTunes-API-React.svg) ![closed issues](https://img.shields.io/github/issues-closed/peter-stuhlmann/iTunes-API-React.svg)
+[![MIT License](https://img.shields.io/github/license/peter-stuhlmann/iTunes-API-React.svg)](https://github.com/peter-stuhlmann/iTunes-API-React/blob/master/LICENSE) 
+![Code size](https://img.shields.io/github/languages/code-size/peter-stuhlmann/iTunes-API-React.svg) 
+![downloads](https://img.shields.io/github/downloads/peter-stuhlmann/iTunes-API-React/total.svg) 
+[![open issues](https://img.shields.io/github/issues/peter-stuhlmann/iTunes-API-React.svg)](https://github.com/peter-stuhlmann/iTunes-API-React/issues?q=is%3Aopen+is%3Aissue)
+[![closed issues](https://img.shields.io/github/issues-closed/peter-stuhlmann/iTunes-API-React.svg)](https://github.com/peter-stuhlmann/iTunes-API-React/issues?q=is%3Aissue+is%3Aclosed)
 
 ---
 
