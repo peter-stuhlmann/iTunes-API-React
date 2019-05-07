@@ -12,9 +12,11 @@ export default class App extends Component {
   constructor(props) {
     super()
     
+    this.localStorage = JSON.parse(localStorage.getItem('Favourite Music'))
+
     this.state = {
       results: [],
-      searchTerm: "Helene Fischer"
+      searchTerm: this.localStorage || 'Helene Fischer'
     }
   }
 
@@ -25,6 +27,9 @@ export default class App extends Component {
   onSearchInputChange = e => {
     e.persist();
     const searchTerm = e.target.value;
+
+    localStorage.setItem("Favourite Music", JSON.stringify(searchTerm))
+
     this.setState({ searchTerm }, () => {
       if (searchTerm.length > 2) {
         this.searchForMusic();
