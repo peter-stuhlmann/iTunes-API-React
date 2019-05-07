@@ -32,10 +32,10 @@ export default class TrackList extends Component {
               <tr>
                 <th></th>
                 <th></th>
-                <th colspan="2" onclick="sortTable(3)">name&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
-                <th onclick="sortTable(4)">artist&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
-                <th onclick="sortTable(5)">release date&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
-                <th onclick="sortTable(6)">price&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
+                <th colSpan="2">name&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
+                <th>artist&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
+                <th>release date&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
+                <th>price&nbsp;<span className="fas fa-caret-down">&nbsp;</span></th>
               </tr>
             </thead>
             <tbody className="tracklist">
