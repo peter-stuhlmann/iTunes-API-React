@@ -17,7 +17,7 @@ export default class TrackListItem extends Component {
               <td>{songs.trackName}</td>
               <td>{songs.artistName}</td>
               <td className="nowrap">{songs.releaseDate}</td>
-              <td><a title="Redirect to iTunes" target="_blanc" href={songs.trackViewUrl}>{songs.trackPrice}&nbsp;{songs.currency}</a></td>
+              <td><a title="Redirect to iTunes" target="_blanc" href={songs.trackViewUrl}>{songs.trackPrice}&nbsp;{songs.currency === 'USD' ? '$' : songs.currency}</a></td>
             </tr>
         )}
 
