@@ -9,17 +9,22 @@ export default class TrackListItem extends Component {
       return (
         <React.Fragment>
 
-          {results.map(songs =>
-            <tr>
-              <td>{songs.index}</td>
-              <td></td>
-              <td><img alt={songs.collectionName} title={songs.collectionName} src={songs.artworkUrl30} /></td>
-              <td>{songs.trackName}</td>
-              <td>{songs.artistName}</td>
-              <td className="nowrap">{songs.releaseDate}</td>
-              <td><a title="Redirect to iTunes" target="_blanc" href={songs.trackViewUrl}>{songs.trackPrice}&nbsp;{songs.currency === 'USD' ? '$' : songs.currency}</a></td>
-            </tr>
-        )}
+          {results.map(songs => {
+
+            const index = results.indexOf(songs) + 1
+            
+            return(
+              <tr>
+                <td>{index}</td>
+                <td></td>
+                <td><img alt={songs.collectionName} title={songs.collectionName} src={songs.artworkUrl30} /></td>
+                <td>{songs.trackName}</td>
+                <td>{songs.artistName}</td>
+                <td className="nowrap">{songs.releaseDate}</td>
+                <td><a title="Redirect to iTunes" target="_blanc" href={songs.trackViewUrl}>{songs.trackPrice}&nbsp;{songs.currency === 'USD' ? '$' : songs.currency}</a></td>
+              </tr>
+            )
+          })}
 
         </React.Fragment>
     );
