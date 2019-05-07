@@ -24,11 +24,14 @@ export default class TrackListItem extends Component {
               songs.trackPrice = "???"
               songs.currency = ""
             }
-            
+
             return(
               <tr key={songs.trackId}>
                 <td>{index}</td>
-                <td></td>
+                <td>
+                  <button id={"play" + songs.trackId}><span className="fas fa-play">&nbsp;</span></button>
+                  <button id={"pause" + songs.trackId}><span className="fas fa-pause">&nbsp;</span></button>
+                </td>
                 <td><img alt={songs.collectionName} title={songs.collectionName} src={songs.artworkUrl30} /></td>
                 <td>{songs.trackName}</td>
                 <td>{songs.artistName}</td>
