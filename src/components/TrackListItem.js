@@ -12,6 +12,7 @@ export default class TrackListItem extends Component {
           {results.map(songs => {
 
             const index = results.indexOf(songs) + 1
+            songs.releaseDate = songs.releaseDate.slice(0, 10)
             
             return(
               <tr>
