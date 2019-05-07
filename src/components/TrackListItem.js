@@ -13,6 +13,17 @@ export default class TrackListItem extends Component {
 
             const index = results.indexOf(songs) + 1
             songs.releaseDate = songs.releaseDate.slice(0, 10)
+
+            if (songs.trackPrice == `-1`) {
+              songs.trackPrice = "Album only"
+              songs.currency = ""
+            } else if (songs.trackPrice == `0`) {
+              songs.trackPrice = "free"
+              songs.currency = ""
+            } else if (songs.trackPrice == undefined) {
+              songs.trackPrice = "???"
+              songs.currency = ""
+            }
             
             return(
               <tr key={songs.trackId}>
