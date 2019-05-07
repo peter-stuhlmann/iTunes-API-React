@@ -14,8 +14,12 @@ export default class App extends Component {
     
     this.state = {
       results: [],
-      searchTerm: ""
+      searchTerm: "Helene Fischer"
     }
+  }
+
+  componentDidMount() {
+    this.searchForMusic()
   }
 
   onSearchInputChange = e => {
@@ -35,6 +39,7 @@ export default class App extends Component {
   }
 
   render() {
+
     return (
       <Router>
 
