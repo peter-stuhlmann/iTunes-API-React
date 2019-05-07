@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import MetaTags from 'react-meta-tags';
 import TrackListItem from './TrackListItem';
+import TrackCounter from "./TrackCounter";
 
 export default class TrackList extends Component {
 
     render() {
-
+      
       return (
         <React.Fragment>
 
@@ -15,6 +16,8 @@ export default class TrackList extends Component {
             <meta name="description" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
           </MetaTags>
         
+          <TrackCounter tracksAmount={Object.keys(this.props.results).length} />
+
           <table id="searchResults">
             <colgroup>
               <col width="50" />
