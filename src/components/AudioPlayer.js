@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-export default class AudioPlayer extends Component {
-
-  render() {
+const AudioPlayer = (props) => {
     return (
-      <React.Fragment>
-      </React.Fragment>
-    );
-  }
+        <audio src="" ref={props.playerRef} />
+    )
 }
+
+export default AudioPlayer

@@ -39,7 +39,7 @@ export default class TrackList extends Component {
               </tr>
             </thead>
             <tbody className="tracklist">
-              <TrackListItem results={this.props.results} />
+              <TrackListItem results={this.props.results} onPlay={this.props.onPlay} onPause={this.props.onPause} />
             </tbody>
           </table>
 
