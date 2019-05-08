@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../assets/scss/main.scss';
+import AudioPlayer from './AudioPlayer';
 import Search from './Search';
 import TrackList from './TrackList';
 import LegalNotice from './LegalNotice';
@@ -13,6 +14,8 @@ export default class App extends Component {
     super()
     
     this.localStorage = JSON.parse(localStorage.getItem('Favourite Music'))
+
+    this.playerRef = React.createRef()
 
     this.state = {
       results: [],
@@ -43,6 +46,18 @@ export default class App extends Component {
       .then(data => this.setState({ results: data.results }));
   }
 
+  onPlay = (previewUrl) => {
+    const player = this.playerRef;
+    player.current.src = previewUrl;
+    player.current.play();
+  }
+
+  onPause = () => {
+    const player = this.playerRef;
+    player.current.pause();
+    player.current.src = "";
+  }
+
   render() {
 
     return (
@@ -55,7 +70,7 @@ export default class App extends Component {
           <Search onSearchInputChangeHandler={this.onSearchInputChange} />
 
           <Switch>
-            <Route exact path="/" render={(props) => <TrackList {...props} results={this.state.results} searchTerm={this.state.searchTerm} />} />
+            <Route exact path="/" render={(props) => <React.Fragment><TrackList {...props} results={this.state.results} searchTerm={this.state.searchTerm} onPlay={this.onPlay} onPause={this.onPause} /><AudioPlayer playerRef={this.playerRef} /></React.Fragment>} />
             <Route path="/impressum" component={ LegalNotice } />
             <Route path="/datenschutzerklaerung" component={ PrivacyPolicy } />
           </Switch>
